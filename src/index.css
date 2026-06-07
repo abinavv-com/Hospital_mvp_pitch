@@ -1,0 +1,242 @@
+/* ============================================================
+   MedKonect — Pitch Landing Page & Portal Styles
+   ============================================================ */
+
+/* Global resets & customizations */
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --glass-nav-bg: rgba(255, 255, 255, 0.75);
+  --glass-blur-strong: blur(20px);
+  --border-subtle: #e1e3e4;
+  --text-body: #191c1d;
+  --text-muted: #43474e;
+  --text-subtle: #73777f;
+  --surface-app: #f8f9fa;
+  --surface-sunken: #f3f4f5;
+  --surface-card: #ffffff;
+  --scrim-video: rgba(0, 48, 87, 0.4);
+  --scrim-blue: rgba(0, 30, 55, 0.6);
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-pill: 999px;
+  --radius-full: 50%;
+  
+  --dur-fast: 0.15s;
+  --dur-base: 0.3s;
+  --dur-slow: 0.4s;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+body {
+  margin: 0;
+  background-color: var(--surface-app);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Page fade-in */
+.mk-page-in {
+  animation: mk-fade-in 0.5s var(--ease-standard) forwards;
+}
+
+@keyframes mk-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulsing live indicators */
+.mk-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+  animation: mk-pulse 1.6s var(--ease-standard) infinite;
+}
+
+@keyframes mk-pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(40, 167, 69, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
+
+/* Interactive card hover */
+.mk-card--interactive {
+  transition: transform var(--dur-slow) var(--ease-bounce), box-shadow var(--dur-slow) var(--ease-standard);
+}
+.mk-card--interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(0, 48, 87, 0.15);
+}
+
+/* Floating keyframe for primary buttons */
+.mk-float {
+  animation: mk-float 3s ease-in-out infinite;
+}
+
+@keyframes mk-float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Custom scrollbars */
+.mk-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.mk-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.mk-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 48, 87, 0.12);
+  border-radius: var(--radius-pill);
+}
+.mk-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 48, 87, 0.25);
+}
+
+/* Phone Simulator styling */
+.phone-wrapper {
+  transition: transform var(--dur-slow) var(--ease-bounce), box-shadow var(--dur-slow) var(--ease-standard);
+}
+.phone-wrapper:hover {
+  transform: translateY(-2px) rotate(0.5deg);
+  box-shadow: 0 35px 60px -15px rgba(0,0,0,0.85);
+}
+
+/* Dialer vibrating animation */
+.ringing {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(0px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(2px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(2px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Global header customization */
+.mk-global-header button {
+  transition: all 0.2s var(--ease-standard);
+}
+.mk-global-header button:hover {
+  transform: translateY(-1px);
+}
+
+/* Spec Tables */
+table {
+  border-collapse: collapse;
+}
+table th {
+  border-bottom: 2px solid var(--border-subtle);
+  color: var(--text-strong);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+table td {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Code block highlight */
+code {
+  font-family: monospace;
+  background: var(--surface-sunken);
+  color: var(--mk-teal-600);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .mk-dashgrid, .mk-stat3, .mk-cat4, .mk-tech3, .mk-rx3 {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 880px) {
+  .mk-side {
+    display: none !important;
+  }
+  .mk-bottom {
+    display: flex !important;
+  }
+  .mk-topnav, .mk-topsearch {
+    display: none !important;
+  }
+  .mk-main {
+    padding: 16px !important;
+  }
+}
+
+/* ============================================================
+   Anxiety Comparison Widget Styles
+   ============================================================ */
+.mk-comparison-card--google {
+  transition: all var(--dur-slow) var(--ease-standard);
+  background: var(--surface-card);
+  box-shadow: 0 4px 20px rgba(217, 48, 37, 0.02);
+  position: relative;
+}
+.mk-comparison-card--google:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(217, 48, 37, 0.08);
+}
+
+.mk-comparison-card--medkonect {
+  transition: all var(--dur-slow) var(--ease-standard);
+  background: var(--surface-card);
+  box-shadow: 0 4px 20px rgba(0, 139, 139, 0.02);
+  position: relative;
+}
+.mk-comparison-card--medkonect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 139, 139, 0.08);
+}
+
+.mk-anxiety-bar-fill {
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Red alert glowing border/shadow for Google */
+.mk-google-alert-pulse {
+  animation: mk-google-pulse 2s infinite ease-in-out;
+}
+
+@keyframes mk-google-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(217, 48, 37, 0.25); }
+  50% { box-shadow: 0 0 0 6px rgba(217, 48, 37, 0.4); }
+  100% { box-shadow: 0 0 0 0 rgba(217, 48, 37, 0.25); }
+}
+
+/* Calm teal glow pulse for MedKonect */
+.mk-med-calm-pulse {
+  animation: mk-med-pulse 3s infinite ease-in-out;
+}
+
+@keyframes mk-med-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 139, 139, 0.15); }
+  50% { box-shadow: 0 0 0 6px rgba(0, 139, 139, 0.25); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 139, 139, 0.15); }
+}
+
+/* Dial needle transitions */
+.mk-needle {
+  transform-origin: 50% 100%;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}

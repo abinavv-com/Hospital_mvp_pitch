@@ -1,0 +1,43 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Status & semantics" subtitle="Emergency, success, info, neutral — fills + chips" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../styles.css"/>
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-app); font-family: var(--font-sans); display:flex; gap:18px; }
+  .col { flex:1; }
+  .label { font: var(--fw-bold) 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 10px; }
+  .fill { height: 40px; border-radius: var(--radius-md); display:flex; align-items:center; padding:0 14px; color:#fff; font: var(--fw-bold) 13px/1 var(--font-sans); }
+  .chip { display:inline-flex; align-items:center; gap:6px; padding:5px 12px; border-radius: var(--radius-pill); font: var(--fw-bold) 12px/1 var(--font-sans); margin-top:10px; }
+  .dot { width:8px; height:8px; border-radius:50%; }
+  .hex { font: var(--fw-regular) 11px/16px var(--font-sans); color: var(--text-muted); margin-top:8px; }
+</style>
+</head>
+<body>
+  <div class="col">
+    <p class="label">Emergency / Alert</p>
+    <div class="fill" style="background:var(--mk-red)">Emergency</div>
+    <span class="chip" style="background:var(--status-danger-bg); color:var(--status-danger-fg)"><span class="dot" style="background:var(--mk-red)"></span>Refill Ready</span>
+    <div class="hex">#D93025</div>
+  </div>
+  <div class="col">
+    <p class="label">Success</p>
+    <div class="fill" style="background:var(--mk-green)">Confirmed</div>
+    <span class="chip" style="background:var(--status-success-bg); color:var(--status-success-fg)">● Normal</span>
+    <div class="hex">#28A745</div>
+  </div>
+  <div class="col">
+    <p class="label">Info / Active</p>
+    <div class="fill" style="background:var(--mk-teal-500)">Live</div>
+    <span class="chip" style="background:var(--status-info-bg); color:var(--status-info-fg)"><span class="dot" style="background:var(--mk-teal-500)"></span>Active</span>
+    <div class="hex">#008B8B · #8cf3f3</div>
+  </div>
+  <div class="col">
+    <p class="label">Neutral</p>
+    <div class="fill" style="background:var(--mk-depth-gray)">Archived</div>
+    <span class="chip" style="background:var(--status-neutral-bg); color:var(--status-neutral-fg)">Pending</span>
+    <div class="hex">#495057 · #e7e8e9</div>
+  </div>
+</body>
+</html>

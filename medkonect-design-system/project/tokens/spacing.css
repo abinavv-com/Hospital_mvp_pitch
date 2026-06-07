@@ -1,0 +1,30 @@
+/* ============================================================
+   MedKonect — Spacing & layout tokens
+   8px base grid. Named layout rails from the reference config.
+   ============================================================ */
+
+:root {
+  /* base unit */
+  --space-base: 8px;
+
+  /* spacing scale (multiples of the 8px base, plus a 4px half-step) */
+  --space-0:  0;
+  --space-1:  4px;   /* half-step / icon gaps          */
+  --space-2:  8px;   /* base                           */
+  --space-3:  12px;  /* tight stack                    */
+  --space-4:  16px;  /* mobile page margin             */
+  --space-5:  20px;
+  --space-6:  24px;  /* gutter — the default card gap   */
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;  /* desktop page margin            */
+
+  /* named layout rails (verbatim from the product config) */
+  --margin-mobile:  16px;
+  --margin-desktop: 64px;
+  --gutter:         24px;
+  --container-max:  1280px;
+  --sidebar-width:  256px;  /* w-64 fixed left rail            */
+  --topbar-height:  64px;   /* h-16 sticky header             */
+}

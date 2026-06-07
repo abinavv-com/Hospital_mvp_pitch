@@ -1,0 +1,37 @@
+<!-- @dsCard group="Type" viewport="700x300" name="Body, label, caption" subtitle="Running copy, buttons/nav labels, eyebrows, metadata" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../styles.css"/>
+<style>
+  body { margin: 0; padding: 28px; background: var(--surface-card); font-family: var(--font-sans); }
+  .spec { display:flex; align-items:baseline; gap:16px; padding:11px 0; border-bottom:1px solid var(--border-subtle); }
+  .spec:last-child { border-bottom:0; }
+  .demo { color: var(--text-body); flex:1; }
+  .tag { font: var(--fw-medium) 11px/16px var(--font-sans); color: var(--text-muted); white-space:nowrap; text-align:right; min-width:150px; }
+</style>
+</head>
+<body>
+  <div class="spec">
+    <div class="demo mk-eyebrow" style="color:var(--text-link)">Upcoming Consultation</div>
+    <div class="tag">Eyebrow · 14 · 700 · +12% · UPPER</div>
+  </div>
+  <div class="spec">
+    <div class="demo mk-body-lg">A secure, encrypted environment for patient diagnostic history.</div>
+    <div class="tag">Body LG · 18/28 · 400</div>
+  </div>
+  <div class="spec">
+    <div class="demo mk-body-md">Manage your remote patient care and video appointments.</div>
+    <div class="tag">Body MD · 16/24 · 400</div>
+  </div>
+  <div class="spec">
+    <div class="demo mk-label-md" style="font-weight:600;color:var(--text-strong)">New Consultation</div>
+    <div class="tag">Label MD · 14/20 · 500 · +5%</div>
+  </div>
+  <div class="spec">
+    <div class="demo mk-caption">ID: #AM-9022 • Hypertension • 10:30 AM</div>
+    <div class="tag">Caption · 12/16 · 400</div>
+  </div>
+</body>
+</html>

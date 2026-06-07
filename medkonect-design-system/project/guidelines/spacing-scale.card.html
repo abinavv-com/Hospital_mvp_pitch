@@ -1,0 +1,41 @@
+<!-- @dsCard group="Spacing" viewport="700x210" name="Spacing scale" subtitle="8px base grid + named layout rails" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../styles.css"/>
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-card); font-family: var(--font-sans); }
+  .label { font: var(--fw-bold) 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px; }
+  .scale { display:flex; align-items:flex-end; gap:14px; margin-bottom:20px; }
+  .item { text-align:center; }
+  .bar { background: var(--mk-teal-500); border-radius: var(--radius-xs); height:24px; margin:0 auto 6px; }
+  .v { font: var(--fw-semibold) 11px/14px var(--font-sans); color: var(--text-body); }
+  .rails { display:flex; gap:10px; }
+  .rail { flex:1; background: var(--surface-sunken); border:1px solid var(--border-subtle); border-radius: var(--radius-sm); padding:10px 12px; }
+  .rail b { display:block; font:var(--fw-bold) 13px/1 var(--font-sans); color:var(--text-strong); }
+  .rail span { font:var(--fw-regular) 11px/16px var(--font-sans); color:var(--text-muted); }
+</style>
+</head>
+<body>
+  <p class="label">Step scale (×8 grid)</p>
+  <div class="scale">
+    <div class="item"><div class="bar" style="width:4px"></div><div class="v">1·4</div></div>
+    <div class="item"><div class="bar" style="width:8px"></div><div class="v">2·8</div></div>
+    <div class="item"><div class="bar" style="width:12px"></div><div class="v">3·12</div></div>
+    <div class="item"><div class="bar" style="width:16px"></div><div class="v">4·16</div></div>
+    <div class="item"><div class="bar" style="width:24px"></div><div class="v">6·24</div></div>
+    <div class="item"><div class="bar" style="width:32px"></div><div class="v">8·32</div></div>
+    <div class="item"><div class="bar" style="width:48px"></div><div class="v">12·48</div></div>
+    <div class="item"><div class="bar" style="width:64px"></div><div class="v">16·64</div></div>
+  </div>
+  <p class="label">Named layout rails</p>
+  <div class="rails">
+    <div class="rail"><b>16px</b><span>margin-mobile</span></div>
+    <div class="rail"><b>24px</b><span>gutter (card gap)</span></div>
+    <div class="rail"><b>64px</b><span>margin-desktop</span></div>
+    <div class="rail"><b>256px</b><span>sidebar width</span></div>
+    <div class="rail"><b>1280px</b><span>container-max</span></div>
+  </div>
+</body>
+</html>

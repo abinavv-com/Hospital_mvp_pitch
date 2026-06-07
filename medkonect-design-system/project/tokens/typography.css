@@ -1,0 +1,57 @@
+/* ============================================================
+   MedKonect — Typography tokens
+   Typeface: Inter (UI + display).  Material Symbols for icons.
+   Scale lifted verbatim from the clinical-portal reference.
+   ============================================================ */
+
+:root {
+  /* families */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: var(--font-sans);
+  --font-icon: "Material Symbols Outlined";
+
+  /* weights */
+  --fw-regular: 400; /* @kind font */
+  --fw-medium:  500; /* @kind font */
+  --fw-semibold:600; /* @kind font */
+  --fw-bold:    700; /* @kind font */
+  --fw-extrabold:800; /* @kind font */
+
+  /* ---- Type scale: size / line-height / tracking / weight ----
+     Each role is a flat set of vars so components can compose them. */
+
+  /* Display — marketing hero numerals & big stats */
+  --display-lg-size: 48px;  --display-lg-line: 56px;  --display-lg-track: -0.02em; --display-lg-weight: 700;
+  --display-mobile-size: 36px; --display-mobile-line: 44px; --display-mobile-track: -0.02em; --display-mobile-weight: 700;
+
+  /* Headline — page & section titles */
+  --headline-lg-size: 32px; --headline-lg-line: 40px; --headline-lg-track: 0px /* @kind other */;     --headline-lg-weight: 600;
+  --headline-md-size: 24px; --headline-md-line: 32px; --headline-md-track: 0px /* @kind other */;     --headline-md-weight: 600;
+
+  /* Body — running copy */
+  --body-lg-size: 18px; --body-lg-line: 28px; --body-lg-weight: 400;
+  --body-md-size: 16px; --body-md-line: 24px; --body-md-weight: 400;
+
+  /* Label — buttons, nav, eyebrows (note the wide tracking) */
+  --label-md-size: 14px; --label-md-line: 20px; --label-md-track: 0.05em; --label-md-weight: 500;
+
+  /* Caption — metadata, timestamps, helper text */
+  --caption-size: 12px; --caption-line: 16px; --caption-weight: 400;
+}
+
+/* ---- Convenience role classes (used by specimen cards & kits) ---- */
+.mk-display-lg { font: var(--display-lg-weight) var(--display-lg-size)/var(--display-lg-line) var(--font-display); letter-spacing: var(--display-lg-track); }
+.mk-display-mobile { font: var(--display-mobile-weight) var(--display-mobile-size)/var(--display-mobile-line) var(--font-display); letter-spacing: var(--display-mobile-track); }
+.mk-headline-lg { font: var(--headline-lg-weight) var(--headline-lg-size)/var(--headline-lg-line) var(--font-display); }
+.mk-headline-md { font: var(--headline-md-weight) var(--headline-md-size)/var(--headline-md-line) var(--font-display); }
+.mk-body-lg { font: var(--body-lg-weight) var(--body-lg-size)/var(--body-lg-line) var(--font-sans); }
+.mk-body-md { font: var(--body-md-weight) var(--body-md-size)/var(--body-md-line) var(--font-sans); }
+.mk-label-md { font: var(--label-md-weight) var(--label-md-size)/var(--label-md-line) var(--font-sans); letter-spacing: var(--label-md-track); }
+.mk-caption { font: var(--caption-weight) var(--caption-size)/var(--caption-line) var(--font-sans); }
+
+/* eyebrow = label, uppercased + tracked — common across the product */
+.mk-eyebrow {
+  font: var(--fw-bold) var(--label-md-size)/var(--label-md-line) var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}

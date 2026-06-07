@@ -1,0 +1,37 @@
+<!-- @dsCard group="Spacing" viewport="700x210" name="Radii & elevation" subtitle="Corner scale + blue-tinted soft shadows" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../styles.css"/>
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-app); font-family: var(--font-sans); }
+  .label { font: var(--fw-bold) 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px; }
+  .row { display:flex; gap:16px; margin-bottom:22px; }
+  .r { width:64px; height:48px; background: var(--mk-blue-700); }
+  .item { text-align:center; }
+  .v { font: var(--fw-semibold) 11px/14px var(--font-sans); color: var(--text-body); margin-top:7px; }
+  .elev { display:flex; gap:20px; }
+  .e { flex:1; height:60px; background: var(--surface-card); border-radius: var(--radius-lg); display:flex; align-items:center; justify-content:center; font:var(--fw-semibold) 12px/1 var(--font-sans); color:var(--text-muted); }
+</style>
+</head>
+<body>
+  <p class="label">Corner radii</p>
+  <div class="row">
+    <div class="item"><div class="r" style="border-radius:var(--radius-sm)"></div><div class="v">sm·8</div></div>
+    <div class="item"><div class="r" style="border-radius:var(--radius-md)"></div><div class="v">md·12</div></div>
+    <div class="item"><div class="r" style="border-radius:var(--radius-lg)"></div><div class="v">lg·16</div></div>
+    <div class="item"><div class="r" style="border-radius:var(--radius-xl)"></div><div class="v">xl·24</div></div>
+    <div class="item"><div class="r" style="border-radius:var(--radius-2xl)"></div><div class="v">2xl·32</div></div>
+    <div class="item"><div class="r" style="width:48px;border-radius:var(--radius-full)"></div><div class="v">full</div></div>
+  </div>
+  <p class="label">Elevation</p>
+  <div class="elev">
+    <div class="e" style="box-shadow:var(--shadow-xs)">xs</div>
+    <div class="e" style="box-shadow:var(--shadow-sm)">sm · card</div>
+    <div class="e" style="box-shadow:var(--shadow-md)">md · hover</div>
+    <div class="e" style="box-shadow:var(--shadow-lg)">lg</div>
+    <div class="e" style="box-shadow:var(--shadow-xl)">xl</div>
+  </div>
+</body>
+</html>

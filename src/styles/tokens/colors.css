@@ -1,0 +1,101 @@
+/* ============================================================
+   MedKonect — Color tokens
+   Derived from the clinical-portal reference (Material-3 base).
+   Two layers: raw palette  →  semantic aliases.
+   ============================================================ */
+
+:root {
+  /* ---- Brand core ------------------------------------------------ */
+  --mk-blue-900:      #001b35; /* deepest brand ink (primary)        */
+  --mk-blue-800:      #001c37;
+  --mk-blue-700:      #003057; /* signature "MedKonect Blue"         */
+  --mk-blue-600:      #234871;
+  --mk-blue-300:      #7699c5;
+  --mk-blue-200:      #a6c9f8;
+  --mk-blue-100:      #d2e4ff;
+
+  --mk-teal-700:      #004f4f;
+  --mk-teal-600:      #006a6a; /* secondary                          */
+  --mk-teal-500:      #008B8B; /* "Clinical Teal" — interactive accent */
+  --mk-teal-300:      #6fd7d6;
+  --mk-teal-200:      #8cf3f3; /* secondary-container                */
+
+  /* ---- Semantic status ------------------------------------------ */
+  --mk-red:           #D93025; /* alert / emergency                  */
+  --mk-error:         #ba1a1a;
+  --mk-error-on:      #93000a;
+  --mk-error-container:#ffdad6;
+  --mk-green:         #28A745; /* success / "arrived" / refill ready */
+  --mk-amber:         #b88217; /* informational warning (derived)    */
+
+  /* ---- Neutrals / surfaces (cool grey ramp) --------------------- */
+  --mk-ink:           #191c1d; /* on-background body text            */
+  --mk-ink-variant:   #43474e; /* secondary text                     */
+  --mk-depth-gray:    #495057;
+  --mk-outline:       #73777f; /* borders / dividers (strong)        */
+  --mk-outline-variant:#c3c6cf;/* borders / dividers (subtle)        */
+
+  --mk-white:         #ffffff;
+  --mk-surface:       #f8f9fa; /* app background                     */
+  --mk-surface-dim:   #d9dadb;
+  --mk-surface-bright:#f8f9fa;
+  --mk-container-lowest:  #ffffff;
+  --mk-container-low:     #f3f4f5;
+  --mk-container:         #edeeef;
+  --mk-container-high:    #e7e8e9;
+  --mk-container-highest: #e1e3e4;
+  --mk-surface-variant:   #e1e3e4;
+
+  --mk-inverse-surface:    #2e3132;
+  --mk-inverse-on-surface: #f0f1f2;
+
+  /* tertiary (muted slate-green, used sparingly for chips) */
+  --mk-tertiary:           #101c1b;
+  --mk-tertiary-container: #25312f;
+  --mk-tertiary-fixed:     #d7e5e2;
+  --mk-on-tertiary-fixed:  #121e1c;
+
+  /* ============================================================
+     SEMANTIC ALIASES — prefer these in components & layouts
+     ============================================================ */
+
+  /* text */
+  --text-strong:      var(--mk-blue-700); /* headings, brand voice   */
+  --text-body:        var(--mk-ink);
+  --text-muted:       var(--mk-ink-variant);
+  --text-subtle:      var(--mk-outline);
+  --text-on-dark:     var(--mk-white);
+  --text-on-dark-soft:var(--mk-blue-100);
+  --text-link:        var(--mk-teal-500);
+
+  /* surfaces */
+  --surface-app:      var(--mk-surface);
+  --surface-card:     var(--mk-container-lowest);
+  --surface-sunken:   var(--mk-container-low);
+  --surface-raised:   var(--mk-container);
+  --surface-inverse:  var(--mk-blue-700); /* dark hero / AI panels   */
+
+  /* interactive */
+  --action-primary:        var(--mk-teal-500); /* primary CTA fill   */
+  --action-primary-hover:  #00a0a0;
+  --action-primary-text:   var(--mk-white);
+  --action-secondary:      var(--mk-teal-200); /* tonal button       */
+  --action-secondary-text: var(--mk-teal-600);
+  --action-ink:            var(--mk-blue-700); /* solid blue button  */
+  --action-danger:         var(--mk-red);
+
+  /* borders */
+  --border-subtle:    var(--mk-outline-variant);
+  --border-strong:    var(--mk-outline);
+  --border-focus:     var(--mk-teal-500);
+
+  /* status chips */
+  --status-success-fg: var(--mk-green);
+  --status-success-bg: color-mix(in srgb, var(--mk-green) 12%, transparent);
+  --status-danger-fg:  var(--mk-red);
+  --status-danger-bg:  color-mix(in srgb, var(--mk-red) 10%, transparent);
+  --status-info-fg:    var(--mk-teal-600);
+  --status-info-bg:    var(--mk-teal-200);
+  --status-neutral-fg: var(--mk-ink-variant);
+  --status-neutral-bg: var(--mk-container-high);
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="MedKonect mark">
+  <rect x="2" y="2" width="44" height="44" rx="12" fill="#003057"></rect>
+  
+  <path d="M10 25 H17 L20 17 L24 31 L27 25 H38" fill="none" stroke="#008B8B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+  
+  <circle cx="38" cy="25" r="3.2" fill="#8cf3f3"></circle>
+</svg>

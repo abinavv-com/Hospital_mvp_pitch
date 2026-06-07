@@ -1,0 +1,31 @@
+<!-- @dsCard group="Spacing" viewport="700x220" name="Glass & tactile surfaces" subtitle="Frosted panels, dark overlay glass, tactile card" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../styles.css"/>
+<style>
+  body { margin: 0; padding: 0; font-family: var(--font-sans); }
+  .stage { position:relative; height:220px; padding:24px; display:flex; gap:18px; align-items:center;
+    background:
+      radial-gradient(circle at 20% 30%, #008B8B55, transparent 45%),
+      radial-gradient(circle at 80% 70%, #003057, #001b35); }
+  .panel { flex:1; padding:18px; border-radius: var(--radius-xl); }
+  .light { background: var(--glass-light-bg); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur); border:1px solid var(--glass-light-border); box-shadow: var(--shadow-md); }
+  .dark { background: var(--glass-dark-bg); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur); border:1px solid var(--glass-dark-border); }
+  .tactile { background: var(--surface-card); border:1px solid var(--glass-light-border); box-shadow: var(--shadow-tactile); }
+  .t { font: var(--fw-bold) 13px/1 var(--font-sans); margin-bottom:6px; }
+  .s { font: var(--fw-regular) 11px/16px var(--font-sans); }
+  .light .t { color: var(--text-strong); } .light .s { color: var(--text-muted); }
+  .dark .t { color:#fff; } .dark .s { color: var(--text-on-dark-soft); }
+  .tactile .t { color: var(--text-strong); } .tactile .s { color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="panel light"><div class="t">Glass · light</div><div class="s">rgba(255,255,255,.7) + blur(12px). Frosted cards over the cool surface.</div></div>
+    <div class="panel dark"><div class="t">Glass · dark</div><div class="s">rgba(0,48,87,.85) + blur. Overlay panels on video &amp; imagery.</div></div>
+    <div class="panel tactile"><div class="t">Tactile card</div><div class="s">Soft shadow + inset top highlight. The everyday content card.</div></div>
+  </div>
+</body>
+</html>

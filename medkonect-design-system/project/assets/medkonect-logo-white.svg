@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="232" height="48" viewBox="0 0 232 48" role="img" aria-label="MedKonect logo">
+  <rect x="2" y="2" width="44" height="44" rx="12" fill="#ffffff" fill-opacity="0.12"></rect>
+  <path d="M10 25 H17 L20 17 L24 31 L27 25 H38" fill="none" stroke="#8cf3f3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+  <circle cx="38" cy="25" r="3.2" fill="#ffffff"></circle>
+  <text x="58" y="32" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5">
+    <tspan fill="#ffffff">Med</tspan><tspan fill="#8cf3f3">Konect</tspan>
+  </text>
+</svg>

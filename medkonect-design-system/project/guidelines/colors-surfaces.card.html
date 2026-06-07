@@ -1,0 +1,39 @@
+<!-- @dsCard group="Colors" viewport="700x230" name="Surfaces & neutrals" subtitle="Cool-grey container ramp + text inks" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../styles.css"/>
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-app); font-family: var(--font-sans); }
+  .row { display: flex; gap: 10px; margin-bottom: 14px; }
+  .sw { flex: 1; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-xs); border: 1px solid var(--border-subtle); }
+  .chip { height: 52px; }
+  .meta { padding: 6px 8px 8px; background: var(--surface-card); }
+  .name { font: var(--fw-semibold) 12px/16px var(--font-sans); color: var(--text-body); }
+  .hex { font: var(--fw-regular) 11px/14px var(--font-sans); color: var(--text-muted); text-transform: uppercase; }
+  .label { font: var(--fw-bold) 11px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 10px; }
+  .inks { display:flex; gap:10px; }
+  .ink { flex:1; border-radius: var(--radius-md); padding: 12px; background: var(--surface-card); border:1px solid var(--border-subtle); }
+  .ink b { display:block; font-size:18px; }
+</style>
+</head>
+<body>
+  <p class="label">Surface containers · low → highest</p>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:#ffffff"></div><div class="meta"><div class="name">lowest</div><div class="hex">#ffffff</div></div></div>
+    <div class="sw"><div class="chip" style="background:#f8f9fa"></div><div class="meta"><div class="name">app/surface</div><div class="hex">#f8f9fa</div></div></div>
+    <div class="sw"><div class="chip" style="background:#f3f4f5"></div><div class="meta"><div class="name">low</div><div class="hex">#f3f4f5</div></div></div>
+    <div class="sw"><div class="chip" style="background:#edeeef"></div><div class="meta"><div class="name">container</div><div class="hex">#edeeef</div></div></div>
+    <div class="sw"><div class="chip" style="background:#e7e8e9"></div><div class="meta"><div class="name">high</div><div class="hex">#e7e8e9</div></div></div>
+    <div class="sw"><div class="chip" style="background:#e1e3e4"></div><div class="meta"><div class="name">highest</div><div class="hex">#e1e3e4</div></div></div>
+  </div>
+  <p class="label">Text inks &amp; lines</p>
+  <div class="inks">
+    <div class="ink"><b style="color:#003057">Strong</b><span class="hex">#003057 headings</span></div>
+    <div class="ink"><b style="color:#191c1d">Body</b><span class="hex">#191c1d copy</span></div>
+    <div class="ink"><b style="color:#43474e">Muted</b><span class="hex">#43474e meta</span></div>
+    <div class="ink"><b style="color:#73777f">Subtle</b><span class="hex">#73777f / outline</span></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- @dsCard group="Brand" viewport="700x260" name="Logo & mark" subtitle="Wordmark lockup, mark, and dark-surface variant" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../styles.css"/>
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-app); font-family: var(--font-sans); display:flex; gap:18px; flex-wrap:wrap; }
+  .tile { border-radius: var(--radius-lg); border:1px solid var(--border-subtle); background: var(--surface-card); padding:22px 24px; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-xs); }
+  .tile.dark { background: var(--mk-blue-700); border-color: transparent; }
+  .tile img { height:40px; display:block; }
+  .full { flex:1 1 100%; }
+  .lab { font: var(--fw-bold) 11px/1 var(--font-sans); letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); margin:0 0 10px; }
+</style>
+</head>
+<body>
+  <div class="full"><p class="lab">Primary lockup</p><div class="tile"><img src="../assets/medkonect-logo.svg" alt="MedKonect"/></div></div>
+  <div style="flex:1"><p class="lab">Mark</p><div class="tile"><img src="../assets/medkonect-mark.svg" alt="mark" style="height:48px"/></div></div>
+  <div style="flex:2"><p class="lab">On brand blue</p><div class="tile dark"><img src="../assets/medkonect-logo-white.svg" alt="MedKonect"/></div></div>
+</body>
+</html>

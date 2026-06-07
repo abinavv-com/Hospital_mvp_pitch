@@ -1,0 +1,43 @@
+/* ============================================================
+   MedKonect — base / reset layer
+   Light-touch resets + body defaults so specimens and kits look
+   consistent without re-declaring the basics each time.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--body-md-size);
+  line-height: var(--body-md-line);
+  font-weight: var(--fw-regular);
+  color: var(--text-body);
+  background-color: var(--surface-app);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0; color: var(--text-strong); }
+p { margin: 0; }
+
+a { color: var(--text-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+::selection { background: var(--mk-teal-500); color: var(--mk-white); }
+
+/* thin clinical scrollbar used in scroll regions */
+.mk-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+.mk-scroll::-webkit-scrollbar-track { background: transparent; }
+.mk-scroll::-webkit-scrollbar-thumb { background: var(--mk-container-highest); border-radius: var(--radius-pill); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
